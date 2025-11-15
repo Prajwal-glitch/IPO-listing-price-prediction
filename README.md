@@ -154,7 +154,6 @@ docker run -it --rm -p 9696:9696 -p 8501:8501 ipo-app
 ### **Next Steps**
 
 * Integrate **real-time market sentiment** (Twitter, news, IPO grey market)
-* Add **explainable AI** (SHAP values)
 * Build Streamlit dashboard
 * Deploy full API on Fly.io or AWS
 
