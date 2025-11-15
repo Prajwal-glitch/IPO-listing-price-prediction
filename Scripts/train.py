@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
-from xgboost import XGBClassifier
+from sklearn.linear_model import LogisticRegression
 import pickle
 
 
@@ -24,16 +24,14 @@ def prepare_data():
 def train_model(X, y):
     # Best hyperparameters you provided (cleaned up for XGBoost)
     best_params = {
-        'colsample_bytree': 0.8099,
-        'learning_rate': 0.1012,
-        'max_depth': 9,
-        'n_estimators': 150,
-        'scale_pos_weight': 10,     # Helps with class imbalance
-        'subsample': 0.8543,
-        'eval_metric': 'logloss',
-    }
+    "C": 0.017787658410143285,
+    "max_iter": 200,
+    "penalty": "l1",
+    "solver": "saga"
+}
 
-    model = XGBClassifier(**best_params)
+
+    model = LogisticRegression(**best_params)
     model.fit(X, y)
 
     return model
