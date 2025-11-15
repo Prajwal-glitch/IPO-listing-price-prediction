@@ -74,7 +74,7 @@ uv run uvicorn predict:app --host 0.0.0.0 --port 9696
 
 # (Optional) Start Streamlit UI
 # uv run streamlit run streamlit_app.py
-
+```
 ---
 
 ## 🐳 Run Using Docker
