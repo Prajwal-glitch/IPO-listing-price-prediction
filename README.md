@@ -104,18 +104,19 @@ docker run -p 9696:9696 -p 8501:8501 ipo-app
 
 ```json
 {
-  "issue_amount_(rs.cr.)": 69.54,
-  "assets_(rs.cr.)": 117.0,
-  "revenue_(rs.cr.)": 620.16,
-  "profit_after_tax_(rs.cr.)": 19.47,
-  "net_worth_(rs.cr.)": 61.23,
-  "reserves_and_surplus_(rs.cr.)": 44.57,
-  "total_borrowing_(rs.cr.)": 0.16,
-  "issue_price_(rs)": 122,
+  "issue_amount_": 69.54,
+  "assets_": 117.0,
+  "revenue_": 620.16,
+  "profit_after_tax_": 19.47,
+  "net_worth_": 61.23,
+  "reserves_and_surplus_": 44.57,
+  "total_borrowing_": 0.16,
+  "issue_price_": 122,
   "sub": 4.11,
   "gmp": 1.0,
   "anchor": 1.0
 }
+
 ```
 
 #### **Sample Response**
