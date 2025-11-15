@@ -76,7 +76,7 @@ uv sync --locked || uv sync
 uv run uvicorn predict:app --host 0.0.0.0 --port 9696
 
 # Start Streamlit UI
-# uv run streamlit run streamlit_app.py
+uv run streamlit run streamlit_app.py
 ```
 ---
 
