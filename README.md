@@ -104,7 +104,7 @@ docker build -t ipo-app .
 ### **2. Run container**
 
 ```bash
-docker run -p 9696:9696 -p 8501:8501 ipo-app
+docker run -it --rm -p 9696:9696 -p 8501:8501 ipo-app
 ```
 
 ---
