@@ -43,47 +43,37 @@ EDA included:
 
 Multiple ML models were trained and compared:
 
-* Linear Regression
-* Random Forest Regressor
-* XGBoost Regressor
+* Logistic Regression
+* Random Forest Classifier
+* XGBoost Classifier
 
 **Evaluation Metrics:**
 
-* RMSE
-* R² Score
+* macro recall
 
-The best-performing model was selected based on **lowest RMSE** and **highest R²**.
+The best-performing model was selected based on **highest macro recall**.
 
 ---
 
 ## 🛠️ How to Run the Project Locally
 
-### **1. Clone the repository**
+## 🚀 Setup Instructions (Using uv)
+
+To clone the repository and install all dependencies with **uv**, run:
 
 ```bash
-git clone <your-repo-url>
-cd sme-ipo-ml
-```
+# Clone the repository
+git clone https://github.com/Prajwal-glitch/SME-IPO-listing-gains.git
+cd SME-IPO-listing-gains
 
-### **2. Create virtual environment & install dependencies**
+# Install dependencies using uv
+uv sync --locked || uv sync
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+# Start FastAPI backend
+uv run uvicorn predict:app --host 0.0.0.0 --port 9696
 
-### **3. Run FastAPI backend**
-
-```bash
-uvicorn app.main:app --reload
-```
-
-### **4. API will be live at:**
-
-```
-http://127.0.0.1:8000
-```
+# (Optional) Start Streamlit UI
+# uv run streamlit run streamlit_app.py
 
 ---
 
