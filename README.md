@@ -68,11 +68,14 @@ cd SME-IPO-listing-gains
 
 # Install dependencies using uv
 uv sync --locked || uv sync
+```
 
+
+```bash
 # Start FastAPI backend
 uv run uvicorn predict:app --host 0.0.0.0 --port 9696
 
-# (Optional) Start Streamlit UI
+# Start Streamlit UI
 # uv run streamlit run streamlit_app.py
 ```
 ---
