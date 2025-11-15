@@ -123,7 +123,8 @@ docker run -p 9696:9696 -p 8501:8501 ipo-app
 
 ```json
 {
-  "predicted_listing_gain": 24.7
+  "prediction": "gains",
+  "probability": 0.7186
 }
 ```
 
