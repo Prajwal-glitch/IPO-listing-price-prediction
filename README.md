@@ -95,6 +95,8 @@ uv run streamlit run streamlit_app.py
 
 ## 🐳 Run Using Docker
 
+### Errors! -> Check if current directory has DockerFile 
+
 ### **1. Build Docker image**
 
 ```bash
