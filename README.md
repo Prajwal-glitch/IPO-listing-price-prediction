@@ -179,6 +179,27 @@ docker run -it --rm -p 9696:9696 -p 8501:8501 ipo-app
 
 ---
 
+flowchart TD
+
+    A[Data Layer<br/>Raw IPO Data] --> B[Notebook Layer<br/>Data Cleaning & Model Dev]
+    B --> C[ML Model Layer<br/>Training & Prediction Scripts]
+    C --> D[FastAPI Backend<br/>/predict API]
+    D --> E[Streamlit Frontend<br/>User Interface]
+
+    C --> F[Model Artifact<br/>model.bin]
+
+    subgraph Container["Docker Container"]
+        D
+        E
+    end
+
+    subgraph Env["uv Environment Manager"]
+        G[Dependency Management<br/>pyproject.toml + uv.lock]
+    end
+
+    G --> Container
+
+
 ## 📘 Author
 
 Prajwal Patil – Machine Learning & Finance Enthusiast
